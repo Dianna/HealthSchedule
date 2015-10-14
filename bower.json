@@ -1,0 +1,25 @@
+{
+  "name": "health",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Dianna/HealthSchedule",
+  "authors": [
+    "Dianna Faulk <diannafaulk@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.10.6",
+    "angular-ui-router": "~0.2.15",
+    "moment-timezone": "~0.4.1",
+    "angular": "~1.4.7"
+  }
+}
