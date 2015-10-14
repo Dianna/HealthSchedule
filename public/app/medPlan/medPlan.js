@@ -2,7 +2,7 @@ angular.module('patientAnalytics.medPlan', [])
 
 .controller('MedplanCtrl', ['$scope', 'Patients', function($scope, Patients){
   $scope.patients = [];
-  
+
   $scope.getPatientsInformation = function(){
     Patients.getAllPatientsInformation()
       .then(function(data){
@@ -46,13 +46,19 @@ angular.module('patientAnalytics.medPlan', [])
     },
     templateUrl: 'app/medPlan/progress-image.html',
     link: function (scope, element, attrs) {
-      scope.internalCheckTime = {};
-      scope.internalCheckTime.timeliness = 'onTime';
-      var scheduledTime = moment( (moment(scope.progress.creationDate).format("YYYY-MM-DD")+"T"+scope.$parent.plan.reminders[0].time)+":00.000Z" ).utcOffset('-0500');
-      var creationDate = moment(scope.progress.creationDate).utcOffset('-0500');
-      console.log('creationDate', creationDate)
-      console.log('scheduledTime', scheduledTime)
-      console.log(moment.duration( scheduledTime.diff(creationDate)).asHours());
+      scope.timeliness = 'On Time';
+      // Format scheduledTime and creationDate to same timeZone
+      var scheduledTime = moment.tz( (moment(scope.progress.creationDate).format("YYYY-MM-DD")+' '+scope.$parent.plan.reminders[0].time), 'America/New_York');
+      var creationDate = moment(scope.progress.creationDate).tz('Europe/London');
+      creationDate = moment(creationDate.clone().tz('America/New_York').format());
+      // Find difference between time taken and scheduled time
+      var diff = moment.duration( scheduledTime.diff(creationDate)).asHours();
+      // Set time as early or late if necessary
+      if (diff > 1){
+        scope.timeliness = 'Early';
+      } else if (diff < -1){
+        scope.timeliness = 'Late';
+      }
     }
   };
 })
