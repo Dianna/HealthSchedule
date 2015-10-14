@@ -7,6 +7,10 @@
   border-top: 2px solid green; 
 }
 
+.window {
+  display: inline-block;
+}
+
 .proof {
   display: inline-block;
   width: auto;
@@ -14,3 +18,5 @@
   height: auto;
   max-height: 5em;
 }
+
+
