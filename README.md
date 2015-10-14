@@ -6,7 +6,7 @@ Show patient information, track glucose checking and medication adherence
 - npm install
 - bower install
 - run nodemon server.js or node server.js
-- navigate to localhost:3040  
+- navigate to localhost:3040/#/analysis   
 
 ##Current Tech Stack:
 - Node/Express Server
