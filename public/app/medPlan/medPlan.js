@@ -54,9 +54,10 @@ angular.module('patientAnalytics.medPlan', [])
       // Find difference between time taken and scheduled time
       var diff = moment.duration( scheduledTime.diff(creationDate)).asHours();
       // Set time as early or late if necessary
-      if (diff > 1){
+      var windowHours = scope.$parent.plan.reminders[0].windowHours;
+      if (diff > windowHours){
         scope.timeliness = 'Early';
-      } else if (diff < -1){
+      } else if (diff < -1*(windowHours)){
         scope.timeliness = 'Late';
       }
     }
