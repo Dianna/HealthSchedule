@@ -9,6 +9,8 @@
 
 .proof {
   display: inline-block;
-  height: auto;
+  width: auto;
   max-width: 5em;
+  height: auto;
+  max-height: 5em;
 }
