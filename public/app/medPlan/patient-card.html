@@ -1,0 +1,7 @@
+<div class="card">
+  <p ng-if="patient.name">Name: {{patient.name.first + ' ' + patient.name.last}}</p>
+  <p>PhoneNumber: {{patient.phoneNumber}}</p>
+  <p ng-if="patient.email">E-mail: {{patient.email}}</p>
+  <p ng-if="patient.birthDate">Age: {{patient.birthDate | age}}</p>
+  <plan-details ng-if="patient.plans.length > 0" ng-repeat="plan in patient.plans" plan="plan"></plan-details>
+</div>

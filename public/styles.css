@@ -1,0 +1,14 @@
+.card {
+  border: 2px solid black;
+  margin: 10px 5px;
+}
+
+.plan {
+  border-top: 2px solid green; 
+}
+
+.proof {
+  display: inline-block;
+  height: auto;
+  max-width: 5em;
+}
