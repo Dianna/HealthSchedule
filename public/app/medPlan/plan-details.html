@@ -1,5 +1,9 @@
 <div class="plan">
-  <p><span class='h4'>Plan: </span>{{plan.incentivePlan.name}}</p>
-  <p><span class='h4'>Directions: </span>{{plan.incentivePlan.description}}</p>
-  <progress-image ng-if="plan.progresses.length > 0" ng-repeat="progress in plan.progresses" progress="progress"></progress-image>
+  <div ng-init="expand = false" ng-click="expand = !expand">
+    <p><span class='h4'>Plan: </span>{{plan.incentivePlan.name}}<span ng-show="!expand" class="glyphicon glyphicon-plus navBarButtons"></span><span ng-show="expand" class="glyphicon glyphicon-minus navBarButtons"></span></p>
+  </div>
+  <div ng-show="expand">
+    <p><span class='h4'>Directions: </span>{{plan.incentivePlan.description}}</p>
+    <progress-image ng-if="plan.progresses.length > 0" ng-repeat="progress in plan.progresses" progress="progress"></progress-image>
+  </div>
 </div>
