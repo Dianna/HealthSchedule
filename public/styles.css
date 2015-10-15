@@ -9,14 +9,14 @@
 
 .window {
   display: inline-block;
+  margin: 0 .5em;
 }
 
 .proof {
   display: inline-block;
-  width: auto;
-  max-width: 5em;
+  width: 10em;
   height: auto;
-  max-height: 5em;
+  max-height: 20em;
 }
 
 

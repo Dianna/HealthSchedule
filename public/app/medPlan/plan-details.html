@@ -1,5 +1,5 @@
 <div class="plan">
-  <p>Plan: {{plan.incentivePlan.name}}</p>
-  <p>Directions: {{plan.incentivePlan.description}}</p>
+  <p><span class='h4'>Plan: </span>{{plan.incentivePlan.name}}</p>
+  <p><span class='h4'>Directions: </span>{{plan.incentivePlan.description}}</p>
   <progress-image ng-if="plan.progresses.length > 0" ng-repeat="progress in plan.progresses" progress="progress"></progress-image>
 </div>

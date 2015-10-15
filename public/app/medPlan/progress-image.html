@@ -1,5 +1,5 @@
 <div class="window">
-  <img ng-if="progress.externalBlob" ng-src="{{progress.externalBlob}}" class="proof">
-  <p ng-if="progress.value">{{progress.value}}</p>
-  <p>{{ timeliness }}</p>
+  <img ng-if="progress.externalBlob" ng-src="{{progress.externalBlob}}" class="img-responsive proof">
+  <p ng-if="progress.value" class="text-center h3"><strong>{{progress.value}}</strong></p>
+  <p class="text-center">{{ timeliness }}</p>
 </div>
