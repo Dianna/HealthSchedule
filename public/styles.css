@@ -1,10 +1,36 @@
+body {
+  background-color: #7BAAC8;
+}
+
+.wellthBrand{
+  max-width: 15em;
+  margin-top: -5px;
+}
+
+.pageContent{
+  margin-top: 75px;
+}
+
 .card {
-  border: 4px solid black;
-  margin: 10px 5px;
+  background-color: #FBFDFE;
+  margin: 2em 3em;
+  border-radius: 10px;
+  border: 4px solid #045285;
+}
+
+.information {
+  border-bottom: 4px solid #045285;
+  padding: 1em 1em;
 }
 
 .plan {
-  border-top: 2px solid green; 
+  /*background-color: #E6F5FA;*/
+  padding: 1em 2em;
+  border-bottom: 2px solid gray; 
+}
+
+.navBarButtons {
+  float: right;
 }
 
 .window {
@@ -18,5 +44,3 @@
   height: auto;
   max-height: 20em;
 }
-
-

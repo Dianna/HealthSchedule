@@ -5,10 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Analytics</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body ng-app="patientAnalytics">
+  <!-- NAVIGATION -->
+  <nav class="container-fluid navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+      <!-- Brand and toggle for mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/analysis"><img src="http://wellthapp.com/assets/img/logo@2x.png" class="wellthBrand"></a>
+      </div>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="nav1">
+        <ul class="nav navbar-nav navBarButtons">
+          <li class="active"><a href="#/analysis">Patient Plans <span class="sr-only">(analysis)</span></a></li>
+          <li><a href="#">Moar Pages<span class="sr-only">(profile)</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
   <!-- ANGULAR APP -->
   <div ui-view></div>
 
